@@ -1,0 +1,33 @@
+ul#products {
+  li {
+    margin-bottom: 40px;
+
+    .product-image {
+      border: none;
+      background: none;
+      overflow: hidden;
+
+      img {
+        -webkit-transition: all 0.2s ease 0s;
+        -moz-transition: all 0.2s ease 0s;
+        -ms-transition: all 0.2s ease 0s;
+        -o-transition: all 0.2s ease 0s;
+        transition: all 0.2s ease 0s;
+      }
+    }
+
+    &:hover {
+      img {
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+      }
+    }
+
+    a.info {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+/*
+ * Logo
+ */
+figure#logo {
+  padding-top: 25px;
+
+  a {
+    display: block;
+    width: 190px;
+    height: 190px;
+    border-radius: 95px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+
+    img {
+      padding: 0;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -ms-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+      background: #cec3b2;
+      img {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+/*
+ * Header menu
+ */
+#header {
+  margin-bottom: 50px;
+
+  nav {
+    border-bottom: 2px solid;
+    border-top: none;
+  }
+}
+
+nav #main-nav-bar {
+  margin-top: 0;
+  font-weight: normal;
+  padding-bottom: 0;
+  border: none;
+
+  a {
+    padding: 0px 20px !important;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    display: block;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: left;
+
+    &:hover,
+    &.active {
+      a {
+        background: $c_brown;
+        color: $c_light;
+      }
+    }
+  }
+}
+
+/*
+ * Local select form
+ */
+
+#locale-select {
+  padding-top: 25px;
+  text-align: center;
+  border-bottom: 2px solid;
+
+  span.locale-switch {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+    font-size: 32px;
+    overflow: hidden;
+
+    &.active,
+    &:hover {
+      background: $c_brown;
+      color: $c_light;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  h2 {
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+    margin-bottom: 5px;
+  }
+}

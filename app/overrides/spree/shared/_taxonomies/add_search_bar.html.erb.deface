@@ -1,0 +1,7 @@
+<!-- insert_bottom "#taxonomies" -->
+<h6 class="taxonomy-root"><%= Spree.t(:'i18n.search-products') %></h6>
+<ul id="nav-bar" data-hook>
+  <li id="search-bar" data-hook>
+    <%= render :partial => 'spree/shared/search' %>
+  </li>
+</ul>

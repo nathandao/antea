@@ -1,0 +1,1 @@
+remove "erb[loud]:contains(\"render :partial => 'spree/shared/nav_bar'\")"

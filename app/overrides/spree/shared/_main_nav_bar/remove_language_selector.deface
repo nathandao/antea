@@ -1,0 +1,2 @@
+remove "erb[silent]:contains('if SpreeI18n::Config.supported_locales.size > 1')"
+closing_selector "erb[silent]:contains('end')"

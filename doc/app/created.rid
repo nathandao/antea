@@ -1,0 +1,5 @@
+Wed, 17 Dec 2014 21:15:52 +0200
+README.rdoc	Sat, 13 Dec 2014 19:30:47 +0200
+app/controllers/application_controller.rb	Sat, 13 Dec 2014 19:30:47 +0200
+app/helpers/application_helper.rb	Sat, 13 Dec 2014 19:30:47 +0200
+app/models/image_decorator.rb	Tue, 16 Dec 2014 21:48:13 +0200

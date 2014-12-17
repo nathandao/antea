@@ -1,0 +1,15 @@
+<!-- insert_after "#logo" -->
+<% if SpreeI18n::Config.supported_locales.size > 1 %>
+  <div id="locale-select" class="columns twelve" href="<%= spree.set_locale_path %>" data-hook>
+    <h2><%= Spree.t(:'i18n.language') %>:</h2>
+    <% supported_locales_options.each do |locale_option| %>
+      <% active_class = '' %>
+      <span class = "locale-switch
+                    <%= locale_option[1] %>
+                    <%= locale_option[1] == I18n.locale ? ' active' : '' %>"
+      locale = "<%= locale_option[1] %>">
+      <%= Spree.t(:"i18n.#{locale_option[1]}") %>
+      </span>
+    <% end %>
+  </div>
+<% end %>

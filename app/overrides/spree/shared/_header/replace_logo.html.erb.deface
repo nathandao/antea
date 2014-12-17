@@ -1,0 +1,4 @@
+<!-- replace "#logo" -->
+<figure id="logo" class="columns four" data-hook>
+  <a href="<%= root_path %>"><img src="<%= image_path('logo.png') %>" alt=""></a>
+</figure>

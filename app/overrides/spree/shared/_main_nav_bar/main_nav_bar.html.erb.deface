@@ -1,0 +1,23 @@
+<!-- replace "nav" -->
+<nav class="columns twelve">
+  <ul id="main-nav-bar" class="inline" data-hook>
+    <li id="home-link"
+        class="<%= 'active' if current_page?(spree.root_path) %>"
+        data-hook>
+        <%= link_to Spree.t(:'i18n.home'), spree.root_path %>
+    </li>
+    <li id="contact-link" data-hook>
+      <%= link_to Spree.t(:'i18n.contact'), spree.root_path %>
+    </li>
+    <li id="about-link" data-hook>
+      <%= link_to Spree.t(:'i18n.about-us'), spree.root_path %>
+    </li>
+    <li id="link-to-cart" data-hook>
+      <noscript>
+        <%= link_to Spree.t(:cart), '/cart' %>
+      </noscript>
+      &nbsp;
+    </li>
+    <script>Spree.fetch_cart()</script>
+  </ul>
+</nav>

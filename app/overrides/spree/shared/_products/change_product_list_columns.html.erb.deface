@@ -1,0 +1,19 @@
+<!--
+replace 'erb[silent]:contains("products.each do |product|")'
+closing_selector 'erb[silent]:contains("end")'
+-->
+<% products.each do |product| %>
+  <% url = product_path(product, :taxon_id => @taxon.try(:id)) %>
+  <li id="product_<%= product.id %>" class="columns four <%= cycle("alpha", "secondary", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+    <a href="<%= url %>" class="cover-link"></a>
+    <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
+      <div class="product-image">
+        <%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>
+      </div>
+      <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+      </span>
+      <%= link_to truncate(product.name, :length => 50), url, :class => 'info', :itemprop => "name", :title => product.name %>
+    <% end %>
+  </li>
+<% end %>
