@@ -34,5 +34,6 @@ module Antea
     # config.i18n.default_locale = :de
     config.assets.enabled = true
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
+    config.assets.paths << "#{Rails.root}/vendor/assets/images/svg"
   end
 end

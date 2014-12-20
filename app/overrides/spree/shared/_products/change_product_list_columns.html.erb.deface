@@ -5,7 +5,13 @@ closing_selector 'erb[silent]:contains("end")'
 <% products.each do |product| %>
   <% url = product_path(product, :taxon_id => @taxon.try(:id)) %>
   <li id="product_<%= product.id %>" class="columns four <%= cycle("alpha", "secondary", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-    <a href="<%= url %>" class="cover-link"></a>
+    <a href="<%= url %>" class="product-cover-link">
+      <img class="overlay-svg" src="<%= asset_path 'logo.png' %>" alt="">
+      <span class="cover-text">
+        <span class="product-name"><%= product.name %></span>
+        <span class="price"><%= display_price(product) %></span>
+      </span>
+    </a>
     <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
       <div class="product-image">
         <%= link_to small_image(product, :itemprop => "image"), url, :itemprop => 'url' %>

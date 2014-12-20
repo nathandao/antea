@@ -35,3 +35,12 @@
 nav#taxonomies .taxonomy-root {
   border-bottom: 3px solid $c_brown;
 }
+
+#search-bar {
+  select,
+  input[type="search"],
+  input[type="submit"] {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
