@@ -12,7 +12,7 @@
     <li id="about-link" data-hook>
       <%= link_to Spree.t(:'i18n.about-us'), spree.root_path %>
     </li>
-    <li id="link-to-cart" data-hook>
+    <li id="link-to-cart" class="oi" data-glyph="cart" data-hook>
       <noscript>
         <%= link_to Spree.t(:cart), '/cart' %>
       </noscript>

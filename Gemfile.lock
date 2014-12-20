@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/nathandao/spree_add_to_cart_ajax.git
+  revision: e5d5575c222d8c04169120dbe20b0510ea8a7915
+  branch: 2-4-stable
+  specs:
+    spree_add_to_cart_ajax (2.4.x)
+      spree_core (~> 2.4.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_i18n.git
   revision: 881c154eaeb046218cf40e592247e0e460c18b08
   branch: 2-4-stable
@@ -22,7 +30,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: d085dd1e0be8fa6cd4e3fbb536a5ae2325c5bfc6
+  revision: 18ba0efc35daf6108f2462d5a17086a6636f9f16
   branch: 2-4-stable
   specs:
     spree (2.4.3.beta)
@@ -96,12 +104,6 @@ GIT
   specs:
     spree_gateway (2.4.0)
       spree_core (~> 2.4.0)
-
-PATH
-  remote: ../spree_add_to_cart_ajax
-  specs:
-    spree_add_to_cart_ajax (2.4.x)
-      spree_core (~> 2.4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -201,7 +203,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.6.11)
     i18n_data (0.5.1)
-    jbuilder (2.2.5)
+    jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
@@ -313,7 +315,7 @@ GEM
     truncate_html (0.9.2)
     turbolinks (2.5.3)
       coffee-rails
-    twitter_cldr (3.1.0)
+    twitter_cldr (3.1.1)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0.0)
       json

@@ -11,12 +11,12 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'     , '~> 2.0'
 
-gem 'spree'                  , github: 'spree/spree'              , branch: '2-4-stable'
-gem 'spree_gateway'          , github: 'spree/spree_gateway'      , branch: '2-4-stable'
-gem 'spree_auth_devise'      , github: 'spree/spree_auth_devise'  , branch: '2-4-stable'
-gem 'spree_i18n'             , github: 'spree-contrib/spree_i18n' , branch: '2-4-stable'
+gem 'spree'                  , github: 'spree/spree'                      , branch: '2-4-stable'
+gem 'spree_gateway'          , github: 'spree/spree_gateway'              , branch: '2-4-stable'
+gem 'spree_auth_devise'      , github: 'spree/spree_auth_devise'          , branch: '2-4-stable'
+gem 'spree_i18n'             , github: 'spree-contrib/spree_i18n'         , branch: '2-4-stable'
 gem 'deface'                 , github: 'spree/deface'
-gem 'spree_add_to_cart_ajax' , path: '../spree_add_to_cart_ajax'  , branch: '2-4-stable'
+gem 'spree_add_to_cart_ajax' , github: 'nathandao/spree_add_to_cart_ajax' , branch: '2-4-stable'
 
 group :development do
   gem 'spring'
