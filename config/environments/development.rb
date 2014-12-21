@@ -39,4 +39,5 @@ Rails.application.configure do
   config.deface.enalbed = false
 
   config.assets.enabled = true
+  config.assets.prefix = "/assets"
 end

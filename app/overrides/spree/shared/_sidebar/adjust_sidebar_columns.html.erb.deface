@@ -1,4 +1,4 @@
 <!-- replace "#sidebar" -->
-<aside id="sidebar" class="columns three" data-hook>
+<aside id="sidebar" class="columns four" data-hook>
   <%= yield :sidebar %>
 </aside>

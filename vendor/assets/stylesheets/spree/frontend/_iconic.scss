@@ -1,4 +1,4 @@
-$iconic-font-path: '../../fonts/iconic/' !default;
+$iconic-font-path: asset-path('assets/iconic_fonts/') !default;
 
 @font-face {
   font-family: 'Icons';

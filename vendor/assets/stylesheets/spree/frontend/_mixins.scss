@@ -1,0 +1,44 @@
+/**
+ * Sass extend
+ */
+%inner-border {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+/**
+ * Some mixins
+ */
+@mixin smooth-transition( $scope: 'all', $duration: 0.3s, $easing: 'ease' ) {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  @if $scope != 'all' {
+    will-change: $scope;
+  }
+}
+
+@mixin custom-button( $height: 40px, $background: $c_brown, $color: $c_light ) {
+  @extend %inner-border;
+  @include smooth-transition();
+
+  background: $background;
+  color: $color;
+  border: 3px solid $background;
+  height: $height;
+  line-height: $height - 3;
+  padding: 0px 10px;
+
+  &:hover {
+    background: $color;
+    color: $background;
+    border-color: $background;
+  }
+}
+
+@mixin custom-button-invert( $height: 40px, $background: $c_light, $color: $c_brown ) {
+  @include custom-button( $height, $background, $color );
+}

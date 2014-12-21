@@ -1,5 +1,5 @@
 <!-- replace '#content' -->
-<div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega offset-by-one" %>" data-hook>
+<div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
   <%= flash_messages %>
   <%= yield %>
 </div>
