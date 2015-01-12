@@ -9,3 +9,11 @@
 //= require spree/frontend
 
 //= require_tree .
+
+$(function() {
+  $('#sidebar').click( function() {
+    if ( !$(this).hasClass('active') ) {
+      $(this).addClass('active');
+    }
+  });
+});

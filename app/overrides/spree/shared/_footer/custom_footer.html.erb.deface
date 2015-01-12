@@ -1,0 +1,7 @@
+<!-- replace "footer#footer" -->
+<footer id="footer" class="sixteen columns" data-hook>
+  <div id="footer-left" class="columns alpha eight" data-hook>
+    <p>© Antea, 2014. <%= Spree.t :all_rights_reserved %></p>
+  </div>
+  <div id="footer-right" class="columns omega eight" data-hook></div>
+</footer>

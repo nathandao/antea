@@ -3,6 +3,12 @@
   #thumbnails ul li {
     @extend %inner-border;
     border: 5px solid $c_light;
+
+    @media only screen and (max-width: 764px) {
+      img {
+        min-height: 1px;
+      }
+    }
   }
 
   #thumbnails ul li {
@@ -94,5 +100,12 @@
   background: $c_brown;
   a {
     color: $c_light;
+  }
+}
+
+.single-product-left-part,
+.single-product-right-part {
+  @media only screen and (max-width: 494px) {
+    width: 98% !important;
   }
 }

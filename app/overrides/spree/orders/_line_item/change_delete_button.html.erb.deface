@@ -1,0 +1,4 @@
+<!-- replace "td.cart-item-delete" -->
+<td class="cart-item-delete" data-hook="cart_item_delete">
+  <%= link_to image_tag('circle-x.svg'), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+</td>

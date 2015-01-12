@@ -4,6 +4,10 @@
 figure#logo {
   padding-top: 25px;
 
+  @media only screen and (max-width: 794px) {
+    width: 98%;
+  }
+
   a {
     display: block;
     width: 190px;
@@ -16,6 +20,10 @@ figure#logo {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 
+    @media only screen and (max-width: 794px) {
+      display: inline-block;
+    }
+
     img {
       padding: 0;
       -webkit-transition: all 0.3s ease 0s;
@@ -23,15 +31,6 @@ figure#logo {
       -ms-transition: all 0.3s ease 0s;
       -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s;
-    }
-
-    &:hover {
-      background: #cec3b2;
-      img {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-        opacity: 0.5;
-      }
     }
   }
 }
@@ -41,21 +40,24 @@ figure#logo {
  */
 #header {
   margin-bottom: 20px;
-
-  nav {
-    border-bottom: 2px solid;
-    border-top: none;
-  }
 }
 
-nav #main-nav-bar {
-  margin-top: 0;
+#main-nav-bar {
+  text-transform: uppercase;
   font-weight: normal;
-  padding-bottom: 0;
-  border: none;
+  margin-top: 20px;
+  border-bottom: $default_border;
+  padding-bottom: 0px;
+  float: left;
+  width: 100%;
+  margin-top: 0;
+
+  @media only screen and (max-width: 794px) {
+    border-bottom: none;
+  }
 
   a {
-    padding: 0px 20px !important;
+    padding: 0px 20px;
     height: 50px;
     line-height: 50px;
     margin: 0;
@@ -78,6 +80,50 @@ nav #main-nav-bar {
   }
 }
 
+#main-nav-bar li#link-to-cart {
+  float: right;
+  position: relative;
+
+  &.oi[data-glyph] {
+    &:before {
+      position: absolute;
+      font-size: 1.4em;
+      left: 20px;
+      top: 15px;
+
+      @media only screen and (max-width: 794px) {
+        top: 35px;
+      }
+    }
+  }
+
+  &:hover {
+    &.oi[data-glyph] {
+      &:before {
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    padding-left: 50px;
+  }
+
+  @media only screen and (max-width: 794px) {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #000;
+    color: #fff;
+    a {
+      background: #000;
+      margin-top: 20px;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 18px;
+    }
+  }
+}
+
 /*
  * Local select form
  */
@@ -86,6 +132,10 @@ nav #main-nav-bar {
   padding-top: 25px;
   text-align: center;
   border-bottom: 2px solid;
+
+  @media only screen and (max-width: 794px) {
+    width: 98%;
+  }
 
   span.locale-switch {
     display: inline-block;
@@ -114,5 +164,11 @@ nav #main-nav-bar {
     padding-bottom: 5px;
     border-bottom: 2px solid;
     margin-bottom: 5px;
+  }
+}
+
+nav {
+  @media only screen and (max-width: 794px) {
+    width: 98% !important;
   }
 }
