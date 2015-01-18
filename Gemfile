@@ -20,8 +20,13 @@ gem 'spree_add_to_cart_ajax' , github: 'nathandao/spree_add_to_cart_ajax' , bran
 
 group :development do
   gem 'spring'
+  gem 'capistrano', '2.15.5'
 end
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
+end
+
+group :production do
+  gem 'unicorn'
 end
