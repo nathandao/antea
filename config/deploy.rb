@@ -20,17 +20,22 @@ task :symlink_database_yml do
   run "ln -sfn #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
 after "bundle:install", "symlink_database_yml"
-# if you want to clean up old releases on each deploy uncomment this:
-# after "deploy:restart", "deploy:cleanup"
 
-# if you're still using the script/reaper helper you will need
-# these http://github.com/rails/irs_process_scripts
+namespace :unicorn do
+  desc "Zero-downtime restart of Unicorn"
+  task :restart, except: { no_release: true } do
+    run "kill -s USR2 `cat /tmp/unicorn.antea.pid`"
+  end
 
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+  desc "Start unicorn"
+  task :start, except: { no_release: true } do
+    run "cd #{current_path} ; bundle exec unicorn_rails -c config/unicorn.rb -D"
+  end
+
+  desc "Stop unicorn"
+  task :stop, except: { no_release: true } do
+    run "kill -s QUIT `cat /tmp/unicorn.antea.pid`"
+  end
+end
+
+after "deploy:restart", "unicorn:restart"
