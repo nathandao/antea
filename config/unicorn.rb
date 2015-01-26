@@ -7,7 +7,7 @@ worker_processes 2
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/tmp/antea.socket", backlog: 64
+listen "/home/deployer/antea/shared/pids/antea.socket", backlog: 64
 
 # Preload our app for more speed
 preload_app true
@@ -39,7 +39,7 @@ before_fork do |server, worker|
 
   # Before forking, kill the master process that belongs to the .oldbin PID.
   # This enables 0 downtime deploys.
-  old_pid = "/tmp/unicorn.antea.pid.oldbin"
+  old_pid = "/home/deployer/antea/shared/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
