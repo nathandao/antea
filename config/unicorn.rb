@@ -1,6 +1,6 @@
 # config/unicorn.rb
 # Set environment to development unless something else is specified
-env = ENV["RAILS_ENV"] || "development"
+env = ENV["RAILS_ENV"] || "production"
 
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete documentation.
 worker_processes 2
@@ -15,7 +15,7 @@ preload_app true
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
-pid "home/deployer/antea/shared/pids/unicorn.pid"
+pid "/home/deployer/antea/shared/pids/unicorn.pid"
 
 # Production specific settings
 if env == "production"
