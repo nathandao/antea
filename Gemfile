@@ -9,6 +9,9 @@ gem 'coffee-rails' , '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'     , '~> 2.0'
+gem 'mina'
+gem 'mina-sidekiq', :require => false
+gem 'mina-unicorn', :require => false
 
 gem 'spree'                  , github: 'spree/spree'                      , branch: '2-4-stable'
 gem 'spree_gateway'          , github: 'spree/spree_gateway'              , branch: '2-4-stable'
