@@ -12,7 +12,7 @@ require 'mina/unicorn'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, 'anteacoffee.com'
-set :deploy_to, '/home/deployer/antea'
+set :deploy_to, '/home/deployer/antea/'
 set :repository, 'git@git.guynathan.com:guynathan/an-tea.git'
 set :branch, 'master'
 set :user, 'deployer'
