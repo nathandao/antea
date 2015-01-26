@@ -15,7 +15,7 @@ preload_app true
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
-pid "/tmp/unicorn.antea.pid"
+pid "home/deployer/antea/shared/pids/unicorn.pid"
 
 # Production specific settings
 if env == "production"
