@@ -71,6 +71,9 @@ task :deploy => :environment do
     to :launch do
       queue "mkdir -p #{deploy_to}/#{current_path}/tmp/"
       queue "touch #{deploy_to}/#{current_path}/tmp/restart.txt"
+
+      invoke :'sidekiq:restart'
+      invoke :'unicorn:restart'
     end
   end
 end
