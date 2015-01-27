@@ -78,4 +78,7 @@ Rails.application.configure do
 
   # Use deface precompiling instead
   config.deface.enalbed = false
+
+  config.assets.enabled = true
+  config.assets.prefix = "/assets"
 end
