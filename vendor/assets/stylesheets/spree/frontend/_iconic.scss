@@ -3,7 +3,11 @@
 @font-face {
   font-family: 'Icons';
   src: font-url('open-iconic.eot');
-  src: font-url('open-iconic.eot?#iconic-sm') format('embedded-opentype'), font-url('open-iconic.woff') format('woff'), font-url('open-iconic.ttf') format('truetype'), font-url('open-iconic.otf') format('opentype'), font-url('open-iconic.svg#iconic-sm') format('svg');
+  src: font-url('open-iconic.eot?#iconic-sm') format('embedded-opentype'),
+       font-url('open-iconic.woff') format('woff'),
+       font-url('open-iconic.ttf') format('truetype'),
+       font-url('open-iconic.otf') format('opentype'),
+       font-url('open-iconic.svg#iconic-sm') format('svg');
   font-weight: normal;
   font-style: normal;
 }
