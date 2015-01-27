@@ -1,0 +1,2 @@
+<!-- insert_after "erb[loud]:contains('canonical_tag(current_store.url)')" -->
+<link rel="icon" type="image/png" href="https://www.anteacoffee.com/favicon.png" />
