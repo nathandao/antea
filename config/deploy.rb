@@ -69,7 +69,6 @@ task :deploy => :environment do
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
     invoke :'rails:db_migrate'
-    invoke :'rails:db_seed'
     invoke :'rails:assets_precompile'
 
     to :launch do
@@ -77,4 +76,10 @@ task :deploy => :environment do
       invoke :'unicorn:restart'
     end
   end
+end
+
+desc "Seed data to the database"
+task :seed => :environment do
+  queue "cd /home/deployer/antea/current"
+  queue "bundle exec rake db:seed RAILS_ENV=production"
 end
