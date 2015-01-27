@@ -41,6 +41,9 @@ end
 # For Rails apps, we'll make some of the shared paths that are shared between
 # all releases.
 task :setup => :environment do
+  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
+
   queue! %[mkdir -p "#{deploy_to}/shared/log"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/log"]
 
@@ -56,9 +59,6 @@ task :setup => :environment do
   # sidekiq needs a place to store its pid file and log file
   queue! %[mkdir -p "#{deploy_to}/shared/pids/"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/pids"]
-
-  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
-  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
 end
 
 desc "Deploys the current version to the server."
