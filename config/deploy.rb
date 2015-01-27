@@ -77,9 +77,3 @@ task :deploy => :environment do
     end
   end
 end
-
-desc "Seed data to the database"
-task :seed => :environment do
-  queue "cd /home/deployer/antea/current"
-  queue "bundle exec rake db:seed RAILS_ENV=production"
-end
