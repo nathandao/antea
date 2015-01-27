@@ -8,3 +8,4 @@ Rails.application.config.assets.version = '2.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += ['*.eot', '*.woff2', '*.woff', '*.ttf', '*.svg']
+Rails.application.config.assets.precompile += %w( open-iconic.otf )
