@@ -56,6 +56,9 @@ task :setup => :environment do
   # sidekiq needs a place to store its pid file and log file
   queue! %[mkdir -p "#{deploy_to}/shared/pids/"]
   queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/pids"]
+
+  queue! %[mkdir -p "#{deploy_to}/shared/sockets"]
+  queue! %[chmod g+rx,u+rwx "#{deploy_to}/shared/sockets"]
 end
 
 desc "Deploys the current version to the server."
