@@ -19,7 +19,6 @@ gem 'spree_auth_devise'      , github: 'spree/spree_auth_devise'            , br
 gem 'spree_i18n'             , github: 'spree-contrib/spree_i18n'           , branch: '2-4-stable'
 gem 'deface'                 , github: 'spree/deface'
 gem 'spree_add_to_cart_ajax' , github: 'nathandao/spree_add_to_cart_ajax'   , branch: '2-4-stable'
-gem 'import_products'        , github: 'joshmcarthur/spree-import-products' , branch: '2-4-stable'
 
 group :development do
   gem 'spring'
